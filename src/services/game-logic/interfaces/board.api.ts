@@ -1,5 +1,5 @@
 // properties declaration for the Board
-import { ShipInstance } from "@/services/gameLogic/interfaces/ship.api";
+import { ShipInstance } from "@/services/game-logic/interfaces/ship.api";
 
 export enum CELL_STATE {
   UNKNOWN,

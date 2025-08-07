@@ -1,4 +1,4 @@
-import { ShipSpecs } from "@/services/gameLogic/interfaces/ship.api";
+import { ShipSpecs } from "@/services/game-logic/interfaces/ship.api";
 
 export const FLEET: ShipSpecs[] = [
   { name: "Battleship", length: 5 },

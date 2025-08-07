@@ -3,20 +3,20 @@ import {
   FlattenedCell,
   GameState,
   RESPONSE,
-} from "@/services/gameLogic/interfaces/board.api";
+} from "@/services/game-logic/interfaces/board.api";
 import {
   Coordination,
   SHIP_ORIENTATION,
   ShipInstance,
   ShipSpecs,
-} from "@/services/gameLogic/interfaces/ship.api";
+} from "@/services/game-logic/interfaces/ship.api";
 import { randomize } from "@/utils/utils";
 
 export class BattleshipBoard {
   private fleet: ShipInstance[] = [];
   private readonly fleetSpecs: ShipSpecs[] = [];
   private readonly boardSize: number;
-  private grid: CELL_STATE[][] = [];
+  private readonly grid: CELL_STATE[][] = [];
 
   constructor(boardSize: number, fleetSpecs: ShipSpecs[]) {
     this.boardSize = boardSize;
@@ -44,7 +44,6 @@ export class BattleshipBoard {
 
         if (this.canPlaceShip(ship, bowCoordination, shipOrientation)) {
           this.fleet.push({
-            id: `${ship.name}-${bowCoordination.row}-${bowCoordination.column}`,
             specs: ship,
             bow: bowCoordination,
             coordination: this.getShipCoordinationList(
@@ -84,7 +83,7 @@ export class BattleshipBoard {
   }
 
   // function to check if a Cell is a part of a Ship
-  private isPartOfExistingShip({ row, column }: Coordination) {
+  private isPartOfExistingShip({ row, column }: Coordination): ShipInstance | undefined {
     // look up for each ship to find any cell that fits the request
     return this.fleet.find((ship) =>
       ship.coordination.some(

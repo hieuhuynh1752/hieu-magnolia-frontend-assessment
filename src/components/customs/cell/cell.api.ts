@@ -1,7 +1,7 @@
 // props of the Cell component
 
-import { Coordination } from "@/services/gameLogic/interfaces/ship.api";
-import { CELL_STATE } from "@/services/gameLogic/interfaces/board.api";
+import { Coordination } from "@/services/game-logic/interfaces/ship.api";
+import { CELL_STATE } from "@/services/game-logic/interfaces/board.api";
 
 export interface CellProps {
   // Position of the Cell

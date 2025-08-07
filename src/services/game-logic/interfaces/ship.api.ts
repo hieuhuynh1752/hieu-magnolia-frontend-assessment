@@ -19,8 +19,6 @@ export type ShipSpecs = {
 };
 
 export interface ShipInstance {
-  id: string;
-
   // specifications of the ship
   specs: ShipSpecs;
 

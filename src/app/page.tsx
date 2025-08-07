@@ -10,9 +10,9 @@ import CommandsArea from "@/components/customs/commands-area/commands-area.view"
 import {
   FlattenedCell,
   RESPONSE,
-} from "@/services/gameLogic/interfaces/board.api";
-import { BattleshipBoard } from "@/services/gameLogic/game";
-import { GAME_SETTINGS } from "@/services/gameLogic/settings";
+} from "@/services/game-logic/interfaces/board.api";
+import { BattleshipBoard } from "@/services/game-logic/game";
+import { GAME_SETTINGS } from "@/services/game-logic/settings";
 
 import { getCellTextPosition } from "@/utils/utils";
 
@@ -45,7 +45,7 @@ export default function Home() {
           : outcome === RESPONSE.MISS
             ? `[Command]: ${getCellTextPosition({ column, row })} - Oops! You missed!`
             : outcome === RESPONSE.SUNK
-              ? `[Command]: ${getCellTextPosition({ column, row })} - Great! A ship sunk! ${gameRef.current!.state.remainingShips} more to go!`
+              ? `[Command]: ${getCellTextPosition({ column, row })} - Great! A ship sunk! ${newGameState.remainingShips} more to go!`
               : `[Error]: ${getCellTextPosition({ column, row })} - You checked this cell already!`,
     ]);
   }, []);

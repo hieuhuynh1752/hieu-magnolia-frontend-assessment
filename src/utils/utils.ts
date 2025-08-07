@@ -1,4 +1,4 @@
-import { Coordination } from "@/services/gameLogic/interfaces/ship.api";
+import { Coordination } from "@/services/game-logic/interfaces/ship.api";
 
 export function randomize(n: number): number {
   return Math.floor(Math.random() * n);

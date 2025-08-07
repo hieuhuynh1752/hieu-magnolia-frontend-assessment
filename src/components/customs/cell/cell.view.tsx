@@ -1,6 +1,6 @@
 import React from "react";
 import { CellProps } from "@/components/customs/cell/cell.api";
-import { CELL_STATE } from "@/services/gameLogic/interfaces/board.api";
+import { CELL_STATE } from "@/services/game-logic/interfaces/board.api";
 import { getCellTextPosition } from "@/utils/utils";
 
 export default function Cell(props: CellProps): React.JSX.Element {
