@@ -45,7 +45,7 @@ export default function Home() {
           : outcome === RESPONSE.MISS
             ? `[Command]: ${getCellTextPosition({ column, row })} - Oops! You missed!`
             : outcome === RESPONSE.SUNK
-              ? `[Command]: ${getCellTextPosition({ column, row })} - Great! A ship sunk! ${newGameState.remainingShips} more to go!`
+              ? `[Command]: ${getCellTextPosition({ column, row })} - Great! A ship sunk! ${newGameState.remainingShips.length} more to go!`
               : `[Error]: ${getCellTextPosition({ column, row })} - You checked this cell already!`,
     ]);
   }, []);
