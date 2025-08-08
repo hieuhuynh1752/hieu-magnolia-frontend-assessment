@@ -61,7 +61,10 @@ I hereby declare that I did use the help of AI throughout the development proces
 - understand the problem
 - get to know the best approach to solve it
 - justify some of the technical concerns that I have based on the results that it gives
-- look up for possible questions (and answers) that could be asked for the next interview rounds if it happens 
+- look up for possible questions (and answers) that could be asked for the next interview rounds if it happens
+
+The usage of AI in this project is kept under a very basic conversation without specific details, as in rationale of information security and personal expertise showcase purpose. 
+The project could be done faster with proper promt engineering, but I decided to do all the coding part myself without any intervention of AI, so it does not reflect all of my skills in using AI.
 
 Information on the AI that I used and the conversation that I made with it:
 - Model: ChatGPT-o3
